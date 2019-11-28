@@ -7,6 +7,7 @@ data = (1E5)*np.loadtxt("Datos.dat")
 s = np.shape(data)
 Nx = s[1]
 Nt = s[0]
+print(s)
 
 fig = plt.figure(figsize=(20,4))
 
@@ -30,7 +31,7 @@ plt.ylabel("$\psi$")
 
 plt.subplot(1,3,3)
 t = np.linspace(0, 1,Nt)
-plt.plot(t, data[:,Nx//4], alpha=i/Nt, color='black')
+plt.plot(t, data[:,Nx//4], color='black')
 plt.xlabel("Tiempo")
 plt.ylabel("$\psi$(x=0)")
 
