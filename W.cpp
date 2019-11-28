@@ -37,12 +37,12 @@ int main(void){
 	}
     
     for(int j = 1; j < Nx; j++){
-		G[1][j] = G[0][j] + ((c*c)/(2*cl*cl))*(G[0][j+1] + G[0][j-1] - 2*G[0][j]);
+		G[1][j] = G[0][j] + (ratio/2)*(G[0][j+1] + G[0][j-1] - 2*G[0][j]);
     }
     
     for(int i = 1; i < Nt; i++){
 		for(int j = 1; j < Nx; j++){
-				G[i+1][j] = 2*G[i][j] - G[i-1][j]+ ((c*c)/(cl*cl))*(G[i][j+1] + G[i][j-1] - 2*G[i][j]);
+				G[i+1][j] = 2*G[i][j] - G[i-1][j]+ (ratio)*(G[i][j+1] + G[i][j-1] - 2*G[i][j]);
 		}
 	}
     
